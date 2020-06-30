@@ -1,0 +1,22 @@
+{% extends 'guestapp/base.html'%}
+
+{%block base%}
+
+  <div class="jumbotron jumbo1 mt-3">
+    <h1>Guest Book</h1>
+<a href="{%url 'create' %}" class='btn btn-primary'>Sign The Guest Book</a>
+ </div>
+
+
+{% for list in lists %}
+<h3>{{list.name}}</h3>
+<hr>
+
+ <div class="jumbotron jumbo ">
+   <p>{{list.comment}}</p>
+</div>
+
+{% endfor%}
+
+
+{% endblock%}
